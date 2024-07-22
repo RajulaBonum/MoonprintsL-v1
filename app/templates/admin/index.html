@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<div>
+		<!-- Edit heros section-->
+		<h1>Edit Product</h1>
+	    <form method="post">
+	        <label for="name">Product Name:</label>
+	        <input type="text" name="name" value="{{ product.name }}" required>
+	        <label for="description">Description:</label>
+	        <textarea name="description" required>{{ product.description }}</textarea>
+	        <label for="price">Price:</label>
+	        <input type="number" step="0.01" name="price" value="{{ product.price }}" required>
+	        <label for="stock">Stock:</label>
+	        <input type="number" name="stock" value="{{ product.stock }}" required>
+	        <button type="submit">Save</button>
+	    </form>
+
+	    <!-- Edit Product section -->
+	    <h1>Edit Product</h1>
+	    <form method="post">
+	        <label for="name">Product Name:</label>
+	        <input type="text" name="name" value="{{ product.name }}" required>
+	        <label for="description">Description:</label>
+	        <textarea name="description" required>{{ product.description }}</textarea>
+	        <label for="price">Price:</label>
+	        <input type="number" step="0.01" name="price" value="{{ product.price }}" required>
+	        <label for="stock">Stock:</label>
+	        <input type="number" name="stock" value="{{ product.stock }}" required>
+	        <button type="submit">Save</button>
+	    </form>
+
+	    <!-- Edit Product section -->
+	    <h1>Edit Product</h1>
+	    <form method="post">
+	        <label for="name">Product Name:</label>
+	        <input type="text" name="name" value="{{ product.name }}" required>
+	        <label for="description">Description:</label>
+	        <textarea name="description" required>{{ product.description }}</textarea>
+	        <label for="price">Price:</label>
+	        <input type="number" step="0.01" name="price" value="{{ product.price }}" required>
+	        <label for="stock">Stock:</label>
+	        <input type="number" name="stock" value="{{ product.stock }}" required>
+	        <button type="submit">Save</button>
+	    </form>
+
+	    <!-- Edit Product section -->
+	    <h1>Edit Product</h1>
+	    <form method="post">
+	        <label for="name">Product Name:</label>
+	        <input type="text" name="name" value="{{ product.name }}" required>
+	        <label for="description">Description:</label>
+	        <textarea name="description" required>{{ product.description }}</textarea>
+	        <label for="price">Price:</label>
+	        <input type="number" step="0.01" name="price" value="{{ product.price }}" required>
+	        <label for="stock">Stock:</label>
+	        <input type="number" name="stock" value="{{ product.stock }}" required>
+	        <button type="submit">Save</button>
+	    </form>
+	</div>
+{% endblock %}

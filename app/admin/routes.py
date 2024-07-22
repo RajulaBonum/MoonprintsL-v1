@@ -8,13 +8,13 @@ from app.extensions import db
 
 @bp.route('/', methods=('GET', 'POST'))
 def index():
-    questions = Question.query.all()
+    main1 = Main1.query.all()
 
     if request.method == 'POST':
-        new_question = Question(content=request.form['content'],
+        new_main = Main1(content=request.form['content'],
                                 answer=request.form['answer'])
-        db.session.add(new_question)
+        db.session.add(new_main)
         db.session.commit()
-        return redirect(url_for('questions.index'))
+        return redirect(url_for('admin.index'))
 
-    return render_template('questions/index.html', questions=questions)
+    return render_template('admin/index.html', main1=main1)
