@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" href="images/logo1.jpg" type="image/x-icon">
+	<title>MoonPrints-Africa</title>
+
+	<!-- Custom css styles sheet -->
+	<link rel="stylesheet" type="text/css" href="styles.css">
+
+
+	<!-- Bootstrap Css -->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+	<!-- JQuery library -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+
+	<!-- Pooper JS -->
+  	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+
+  	<!-- Bootstrap Javascript -->
+  	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+	<!-- This is the header section -->
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top" style="min-height: 5em;">
+		<!-- Brand -->
+		<a class="navbar-brand" href="#">MoonPrints-Africa</a>
+
+		<!-- Toggler/collapsible Button -->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#myNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<!-- Navbar links -->
+		<div class="collapse navbar-collapse" id="myNavbar">
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item">
+					<a class="nav-link" href="#why-us">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#shop">Our Shop</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#about">About Us</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#contact">Contact Us</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<!-- main section -->
+	<div>
+		{% block content %} {% endblock %}
+	</div>
+
+	<!-- Footer section -->
+	<footer class="container-fluid bg-dark text-light">
+		<div>
+			<h3 class="mb-5 text-center">Our Contact Information</h3>
+			<div class="mb-3">
+				<strong>Email:</strong> moonprintsafrica@gmail.com
+			</div>
+			<div class="mb-3">
+				<strong>Phone:</strong>+254-792-447-497
+			</div>
+			<div class="mb-3">
+				<strong>Address:</strong>01000 Thika, Nairobi Kenya.
+			</div>
+		</div>
+		<div class="d-flex justify-content-center">
+			<div class="c-img ml-3">
+				<a href="https://wa.me/254792447497" target="_blank"><img class="img-fluid" src="images/whatsapp.svg"></a>
+			</div>
+			<div class="c-img ml-3">
+				<a href="https://www.facebook.com/moon_prints254" target="_blank"><img class="img-fluid" src="images/fb.svg"></a>
+			</div>
+			<div class="c-img ml-3">
+				<a href="https://www.instagram.com/moon_prints254" target="_blank"><img class="img-fluid" src="images/insta.svg"></a>
+			</div>
+			<div class="c-img ml-3">
+				<a href="mailto:moonprintsafrica@gmail.com" target="_blank"><img class="img-fluid" src="images/email.svg"></a>
+			</div>
+		</div>
+		<hr class="bg-white">
+		<div class="text-center">
+			&copy 2024 | MoonPrints Africa
+		</div>
+	</footer>
+
+	<!-- Tawk API -->
+	<!--Start of Tawk.to Script-->
+	<script type="text/javascript">
+		var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+		(function(){
+			var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+			s1.async=true;
+			s1.src='https://embed.tawk.to/66999222becc2fed69275134/1i33u5loe';
+			s1.charset='UTF-8';
+			s1.setAttribute('crossorigin','*');
+			s0.parentNode.insertBefore(s1,s0);
+		})();
+
+		//Form script
+    	document.getElementById('contact-form').addEventListener('submit', function(event) {
+    	event.preventDefault(); // Prevent the default form submission
+    	const name = document.getElementById('user-name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const msg = document.getElementById('msg').value;
+
+        const mailtoLink = `mailto:moonprintsafrica@gmail.com?subject=Contact from ${name}&body=Name: ${name}%0AEmail: ${email}%0APhone: ${phone}%0AMessage: ${msg}`;
+        window.location.href = mailtoLink;
+    });
+	</script>
+	<!--End of Tawk.to Script-->
+
+
+</body>
+</html>

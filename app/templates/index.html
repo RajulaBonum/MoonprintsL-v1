@@ -1,0 +1,189 @@
+{% extends 'base.html' %}
+
+{% block content%}
+	<!-- Heros Section -->
+	<section class="container-fluid hero d-flex flex-column justify-content-end">
+		{% for hero in main1 %}
+			<h1 class="font-italic">Welcome To <strong>MoonPrints-Africa</strong></h1>
+			<h4 class="tx-1">{{ hero.hero_h2 }}</h4>
+		{% endfor%}
+	</section>
+
+	<!-- Featured products -->
+	<section class="mt-5" id="shop">
+		{% for product in main1 %}
+			<h1 class="text-center font-italic tx-2">{{ product.product_h1 }}</h1>
+			<hr class="hr-1">
+			<!-- Item 1 -->
+			<div class="container-fluid">
+				<div class="container m-auto row mt-5">
+					<div class="col-md-6 d-flex flex-column justify-content-center p-3">
+						<h2 class="text-center">{{ product.product_item1_h1 }}</h2>
+						<p class="p-3 small">
+							{{ product.product_item1_p }}
+						</p>
+						<a href="https://wa.me/254792447497" target="_blank" class="btn btn-secondary ml-3" role="button" style="width: 50%">Learn More</a>
+					</div>
+					<div class="col-md-6 d-flex flex-column justify-content-center">
+						<img class="img-fluid" src="images/t3.jpg">
+					</div>
+				</div>
+			</div>
+
+			<!-- Item 2 -->
+			<div class="container-fluid">
+				<div class="container m-auto row mt-5">
+					<div class="col-md-6 d-flex flex-column justify-content-center">
+						<img class="img-fluid" src="images/c1.jpg">
+					</div>
+					<div class="col-md-6 d-flex flex-column justify-content-center p-3">
+						<h2 class="text-center">{{ product.product_item2_h1 }}</h2>
+						<p class="p-3 small">
+							{{ product.product_item2_p }}
+						</p>
+						<a href="https://wa.me/254792447497" target="_blank" class="btn btn-secondary ml-3" role="button" style="width: 50%">Learn More</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- Item 3 -->
+			<div class="container-fluid">
+				<div class="container m-auto row mt-5">
+					<div class="col-md-6 d-flex flex-column justify-content-center p-3">
+						<h2 class="text-center">{{ product.product_item3_h1 }}</h2>
+						<p class="p-3 small">
+							{{ product.product_item3_p }}
+						</p>
+						<a href="https://wa.me/254792447497" target="_blank" class="btn btn-secondary ml-3" role="button" style="width: 50%">Learn More</a>
+					</div>
+					<div class="col-md-6 d-flex flex-column justify-content-center">
+						<img class="img-fluid" src="images/h1.jpg">
+					</div>
+				</div>
+			</div>
+
+			<!-- Item 4 -->
+			<div class="container-fluid">
+				<div class="container m-auto row mt-5">
+					<div class="col-md-6 d-flex flex-column justify-content-center p-3">
+						<h2 class="text-center">{{ product.product_item4_h1 }}</h2>
+						<p class="p-3 small">
+							{{ product.product_item4_p }}
+						</p>
+						<a href="https://wa.me/254792447497" target="_blank" class="btn btn-secondary ml-3" role="button" style="width: 50%">Learn More</a>
+					</div>
+					<div class="col-md-6 d-flex flex-column justify-content-center">
+						<img class="img-fluid" src="images/h1.jpg">
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</section>
+
+	<!-- About Us section -->
+	<section class="container-fluid bg-1" id="about">
+		{% for about in main1 %}
+			<div class="row">
+				<div class="col-lg-6 p-5 mt-5">
+					<h1 class="mb-3"><strong>About Us</strong></h1>
+					<h4 class="mb-3 font-italic">{{ about.about_h1 }}</h4>
+					<p class="mb-5">
+						{{ about.about_p }}
+					</p>
+					<div>
+						<a href="https://wa.me/254792447497" target="_blank">
+							<button type="button" class="btn btn-dark p-3">CONTACT US</button>
+						</a>
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<img class="img-fluid" src="images/about1.png">
+				</div>
+			</div>
+			<div class="d-md-flex justify-content-between">
+				<div class="about-card ml-md-3">
+					<h3>CALL US</h3>
+					<p>
+						{{ about.about_cntc_c1 }}, <br>
+						{{ about.about_cntc_c2 }}, <br>
+					</p>
+				</div>
+				<div class="about-card ml-md-3">
+					<h3>LOCATION</h3>
+					<p>
+						{{ about.about_cntc_l1 }} <br>
+						{{ about.about_cntc_l1 }} <br>
+					</p>
+				</div>
+				<div class="about-card ml-md-3">
+					<h3>HOURS</h3>
+					<p>
+						{{ about.about_cntc_hp }} <br>
+					</p>
+				</div>
+			</div>
+		{% endfor %}
+	</section>
+
+	<!-- Value proposition section -->
+	<section class="container-fluid text-center" id="why-us">
+		{% for value in main1 %}
+			<h1 class="mb-5 font-italic tx-2">{{ value.value_h1 }}</h1>
+			<hr class="hr-">
+			<div class="d-sm-flex justify-content-around text-center">
+				<div class="p-3">
+					<div class="v-img mb-3">
+						<img src="images/medal-solid.svg" class="img-fluid">
+					</div>
+					<h3>{{ value.value_item1_h }}</h3>
+					<p>{{ value.value_item1_p }}</p>
+				</div>
+				<div class="p-3">
+					<div class="v-img mb-3">
+						<img src="images/truck-fast-solid.svg" class="img-fluid">
+					</div>
+					<h3>{{ value.value_item2_h }}</h3>
+					<p>{{ value.value_item2_p }}</p>
+				</div>
+				<div class="p-3">
+					<div class="v-img mb-3">
+						<img src="images/dollar-solid.svg" class="img-fluid">
+					</div>
+					<h3>{{ value.value_item3_h }}</h3>
+					<p>{{ value.value_item3_p }}</p>
+				</div>
+			</div>
+			<hr>
+		{% endfor %}
+	</section>
+
+	<!-- Email Subscription and Contact information -->
+	<section class="container mb-5" id="contact">
+		<h2 class="mb-5 text-center tx-2 font-italic">Do You Have Questions?</h2>
+		<div>
+			<div class="mb-5">
+				<h2 class="text-center mb-3">Send Us An Email</h2>
+				<form id="contact-form">
+					<div class="form-group mb-3 f-border">
+						<label for="user-name">Full Name:</label>
+						<input type="name" class="form-control no-border" id="user-name" required>
+					</div>
+					<div class="form-group mb-3 f-border">
+						<label for="email">Email Address:</label>
+						<input type="name" class="form-control no-border" id="email" required>
+					</div>
+					<div class="form-group mb-3 f-border">
+						<label for="phone">Phone number:</label>
+						<input type="tel" class="form-control no-border" id="phone">
+					</div>
+					<div class="form-group mb-3 f-border">
+						<label for="msg">Message:</label>
+						<textarea class="form-control no-border" id="msg" type="text" placeholder="Enter your message here..." style="height: 10rem;" required>
+						</textarea>
+					</div>
+					<button type="submit" class="btn btn-secondary mb-2">Email Us</button>
+				</form>
+			</div>
+		</div>
+	</section>
+{% endblock %}
