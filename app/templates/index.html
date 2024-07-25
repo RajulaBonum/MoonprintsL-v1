@@ -1,160 +1,83 @@
 {% extends 'base.html' %}
 
 {% block content%}
-	<!-- Heros Section -->
-	<section class="container-fluid hero d-flex flex-column justify-content-end">
-		{% for hero in main1 %}
-			<h1 class="font-italic">Welcome To <strong>MoonPrints-Africa</strong></h1>
-			<h4 class="tx-1">{{ hero.hero_h2 }}</h4>
-		{% endfor%}
-	</section>
-
-	<!-- Featured products -->
-	<section class="mt-5" id="shop">
-		{% for product in main1 %}
-			<h1 class="text-center font-italic tx-2">{{ product.product_h1 }}</h1>
-			<hr class="hr-1">
-			<!-- Item 1 -->
-			<div class="container-fluid">
-				<div class="container m-auto row mt-5">
-					<div class="col-md-6 d-flex flex-column justify-content-center p-3">
-						<h2 class="text-center">{{ product.product_item1_h1 }}</h2>
-						<p class="p-3 small">
-							{{ product.product_item1_p }}
-						</p>
-						<a href="https://wa.me/254792447497" target="_blank" class="btn btn-secondary ml-3" role="button" style="width: 50%">Learn More</a>
-					</div>
-					<div class="col-md-6 d-flex flex-column justify-content-center">
-						<img class="img-fluid" src="images/t3.jpg">
-					</div>
-				</div>
-			</div>
-
-			<!-- Item 2 -->
-			<div class="container-fluid">
-				<div class="container m-auto row mt-5">
-					<div class="col-md-6 d-flex flex-column justify-content-center">
-						<img class="img-fluid" src="images/c1.jpg">
-					</div>
-					<div class="col-md-6 d-flex flex-column justify-content-center p-3">
-						<h2 class="text-center">{{ product.product_item2_h1 }}</h2>
-						<p class="p-3 small">
-							{{ product.product_item2_p }}
-						</p>
-						<a href="https://wa.me/254792447497" target="_blank" class="btn btn-secondary ml-3" role="button" style="width: 50%">Learn More</a>
-					</div>
-				</div>
-			</div>
-
-			<!-- Item 3 -->
-			<div class="container-fluid">
-				<div class="container m-auto row mt-5">
-					<div class="col-md-6 d-flex flex-column justify-content-center p-3">
-						<h2 class="text-center">{{ product.product_item3_h1 }}</h2>
-						<p class="p-3 small">
-							{{ product.product_item3_p }}
-						</p>
-						<a href="https://wa.me/254792447497" target="_blank" class="btn btn-secondary ml-3" role="button" style="width: 50%">Learn More</a>
-					</div>
-					<div class="col-md-6 d-flex flex-column justify-content-center">
-						<img class="img-fluid" src="images/h1.jpg">
-					</div>
-				</div>
-			</div>
-
-			<!-- Item 4 -->
-			<div class="container-fluid">
-				<div class="container m-auto row mt-5">
-					<div class="col-md-6 d-flex flex-column justify-content-center p-3">
-						<h2 class="text-center">{{ product.product_item4_h1 }}</h2>
-						<p class="p-3 small">
-							{{ product.product_item4_p }}
-						</p>
-						<a href="https://wa.me/254792447497" target="_blank" class="btn btn-secondary ml-3" role="button" style="width: 50%">Learn More</a>
-					</div>
-					<div class="col-md-6 d-flex flex-column justify-content-center">
-						<img class="img-fluid" src="images/h1.jpg">
-					</div>
-				</div>
-			</div>
-		{% endfor %}
+	<!-- This is the Hero's section -->
+	<section class="container-fluid hero d-flex flex-column justify-content-end" style="background-image: url('{{ url_for('static', filename='images/bg5.jpg') }}');">
+		<h1 class="font-italic">Welcome To <strong>MoonPrints-Africa</strong></h1>
+		<h4 class="tx-1">Transform Your Space with Personalized Prints</h4>
 	</section>
 
 	<!-- About Us section -->
 	<section class="container-fluid bg-1" id="about">
-		{% for about in main1 %}
-			<div class="row">
-				<div class="col-lg-6 p-5 mt-5">
-					<h1 class="mb-3"><strong>About Us</strong></h1>
-					<h4 class="mb-3 font-italic">{{ about.about_h1 }}</h4>
-					<p class="mb-5">
-						{{ about.about_p }}
-					</p>
-					<div>
-						<a href="https://wa.me/254792447497" target="_blank">
-							<button type="button" class="btn btn-dark p-3">CONTACT US</button>
-						</a>
-					</div>
-				</div>
-				<div class="col-lg-6">
-					<img class="img-fluid" src="images/about1.png">
+		<div class="row">
+			<div class="col-lg-6 p-5 mt-5">
+				<h1 class="mb-3"><strong>About Us</strong></h1>
+				<h4 class="mb-3 font-italic">MoonPrints-Africa</h4>
+				<p class="mb-5">
+					At <b>MoonPrints-Africa</b>, we believe in the power of personalization. Our mission is to bring your unique vision to life through high-quality, customized prints. Founded by a team of passionate artists and designers, MoonPrints is dedicated to transforming your space with art that speaks to you. Whether you're looking to commemorate a special moment or add a personal touch to your home decor, we're here to help you create something truly special.
+				</p>
+				<div>
+					<a href="https://wa.me/254792447497" target="_blank">
+						<button type="button" class="btn btn-dark p-3">CONTACT US</button>
+					</a>
 				</div>
 			</div>
-			<div class="d-md-flex justify-content-between">
-				<div class="about-card ml-md-3">
-					<h3>CALL US</h3>
-					<p>
-						{{ about.about_cntc_c1 }}, <br>
-						{{ about.about_cntc_c2 }}, <br>
-					</p>
-				</div>
-				<div class="about-card ml-md-3">
-					<h3>LOCATION</h3>
-					<p>
-						{{ about.about_cntc_l1 }} <br>
-						{{ about.about_cntc_l1 }} <br>
-					</p>
-				</div>
-				<div class="about-card ml-md-3">
-					<h3>HOURS</h3>
-					<p>
-						{{ about.about_cntc_hp }} <br>
-					</p>
-				</div>
+			<div class="col-lg-6">
+				<img class="img-fluid" src="{{ url_for('static', filename='images/about1.png') }}">
 			</div>
-		{% endfor %}
+		</div>
+		<div class="d-md-flex justify-content-between">
+			<div class="about-card ml-md-3">
+				<h3>CALL US</h3>
+				<p>
+					+254 (792) 447-497, <br>
+					+254 (792) 447-497, <br>
+				</p>
+			</div>
+			<div class="about-card ml-md-3">
+				<h3>LOCATION</h3>
+				<p>
+					01000 Thika, Kenya <br>
+					00100 Nairobi, Kenya <br>
+				</p>
+			</div>
+			<div class="about-card ml-md-3">
+				<h3>HOURS</h3>
+				<p>
+					Mon - Sat : 8.00AM - 5.00PM, <br>
+				</p>
+			</div>
+		</div>
 	</section>
 
 	<!-- Value proposition section -->
 	<section class="container-fluid text-center" id="why-us">
-		{% for value in main1 %}
-			<h1 class="mb-5 font-italic tx-2">{{ value.value_h1 }}</h1>
-			<hr class="hr-">
-			<div class="d-sm-flex justify-content-around text-center">
-				<div class="p-3">
-					<div class="v-img mb-3">
-						<img src="images/medal-solid.svg" class="img-fluid">
-					</div>
-					<h3>{{ value.value_item1_h }}</h3>
-					<p>{{ value.value_item1_p }}</p>
+		<h1 class="mb-5 font-italic tx-2">Why Us</h1>
+		<hr class="hr-">
+		<div class="d-sm-flex justify-content-around text-center">
+			<div class="p-3">
+				<div class="v-img mb-3">
+					<img src="{{url_for('static', filename='images/medal-solid.svg') }}" class="img-fluid">
 				</div>
-				<div class="p-3">
-					<div class="v-img mb-3">
-						<img src="images/truck-fast-solid.svg" class="img-fluid">
-					</div>
-					<h3>{{ value.value_item2_h }}</h3>
-					<p>{{ value.value_item2_p }}</p>
-				</div>
-				<div class="p-3">
-					<div class="v-img mb-3">
-						<img src="images/dollar-solid.svg" class="img-fluid">
-					</div>
-					<h3>{{ value.value_item3_h }}</h3>
-					<p>{{ value.value_item3_p }}</p>
-				</div>
+				<h3>High Quality</h3>
+				<p>Crafted with premium materials for a lasting impression</p>
 			</div>
-			<hr>
-		{% endfor %}
+			<div class="p-3">
+				<div class="v-img mb-3">
+					<img src="{{url_for('static', filename='images/truck-fast-solid.svg') }}" class="img-fluid">
+				</div>
+				<h3>Fast Delivery</h3>
+				<p>Experience fast and reliable delivery services.</p>
+			</div>
+			<div class="p-3">
+				<div class="v-img mb-3">
+					<img src="{{url_for('static', filename='images/dollar-solid.svg') }}" class="img-fluid">
+				</div>
+				<h3>Affordable Pricing</h3>
+				<p>Get your customized merchandise at pocket-friendly prices.</p>
+			</div>
+		</div>
+		<hr>
 	</section>
 
 	<!-- Email Subscription and Contact information -->

@@ -6,7 +6,5 @@ from app.main import bp
 
 @bp.route('/')
 def index():
-    
-    main1 = Main1.query.all()
 
-    return render_template('index.html', main1=main1)
+    return render_template('index.html')
